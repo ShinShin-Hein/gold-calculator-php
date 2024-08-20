@@ -16,8 +16,8 @@
        if(empty($gram) || empty($salePrice) || empty($currentPrice)){
         echo '<script>alert("Please Enter valid numbers in all files.")</script>'; 
        }else{
-        $gramToPae =number_format($gram / 1.0205, 2);
-        $paeToKyatTharr = number_format($gramToPae / 16, 2);
+        $gramToPae =$gram / 1.0205;
+        $paeToKyatTharr =$gramToPae / 16;
         $goldPrice = $paeToKyatTharr * $currentPrice;
         $handPrice = $salePrice - $goldPrice;
        }
@@ -43,9 +43,9 @@
             <input class="calBtn" type="submit" value="Calculate" name="btn">
             <div class="result-container">
                 <h2 style="margin-bottom: 20px;">Result</h2>
-                <p>Gold Weight <?php echo"<b>$gramToPae</b>"?><span>Pae</span></p>
-                <p>Gold Price <?php echo "<b>$goldPrice</b>"?><span>Kyat</span></p>
-                <p>Hand Price <?php echo "<b>$handPrice</b>"?><span>Kyat</span></p>
+                <p>Gold Weight <?php echo"<b>".number_format($gramToPae, 2)."</b>"?><span>Pae</span></p>
+                <p>Gold Price <?php echo "<b>".number_format($goldPrice, 2)."</b>"?><span>Kyat</span></p>
+                <p>Hand Price <?php echo "<b>".number_format($handPrice, 2)."</b>"?><span>Kyat</span></p>
             </div>
             
         </form>
