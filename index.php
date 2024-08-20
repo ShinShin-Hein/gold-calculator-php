@@ -47,7 +47,6 @@
                 <p>Gold Price <?php echo "<b>".number_format($goldPrice, 2)."</b>"?><span>Kyat</span></p>
                 <p>Hand Price <?php echo "<b>".number_format($handPrice, 2)."</b>"?><span>Kyat</span></p>
             </div>
-            
         </form>
         </div>
     </div>
