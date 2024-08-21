@@ -138,6 +138,9 @@ form{
 </head>
 <body>
     <?php
+    $gram = null;
+    $salePrice = null;
+    $currentPrice = null;
     if(isset($_POST["btn"])){
       if(isset($_POST["gram-input"]) && isset($_POST["sale-price"]) && isset($_POST["current-price"])){
        $gram = $_POST["gram-input"];
@@ -161,15 +164,15 @@ form{
         <form action="index.php" method="post">
             <div class="input-group">
                 <label for="">Gold Weight (grams)</label>
-                <input type="number" name="gram-input" id="" required>
+                <input type="number" name="gram-input" id="" required value=<?php echo $gram?>>
             </div>
             <div class="input-group">
                 <label for="">Sale Price</label>
-                <input type="number" name="sale-price" id="" required>
+                <input type="number" name="sale-price" id="" required value=<?php echo $salePrice?>>
             </div>
             <div class="input-group">
                 <label for="">Current Price</label>
-                <input type="number" name="current-price" id="" required>
+                <input type="number" name="current-price" id="" required value=<?php echo $currentPrice?>>
             </div>
             <input class="calBtn" type="submit" value="Calculate" name="btn">
             <div class="result-container">
