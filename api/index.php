@@ -27,7 +27,7 @@ body{
 .container{
     width: 35%;
     margin: auto;
-    height: 580px;
+    height: 590px;
     background-color: rgb(33, 33, 33);
     display: flex;
     flex-direction: column;
@@ -70,23 +70,19 @@ body{
 
 form{
     width: 85%;
-    height: 490px;
     margin: auto;
     margin-top: 20px;
 }
 
 .input-group input{
     padding: 12px;
-    margin: 15px 0px;
     width: 100%;
+    margin: 15px 0px;
     border-radius: 5px;
     border: none;
+    margin-top: 13px;
     cursor: pointer;
     background-color: rgb(195, 184, 67);
-}
-
-.input-group p{
-    color: red;
 }
 
 .calBtn{
@@ -99,7 +95,6 @@ form{
     margin: 15px 0px;
     box-shadow: 0 0 3px white;
     background-color: rgb(74, 74, 74);
-
 }
 
 .calBtn:hover{
@@ -149,6 +144,7 @@ form{
        $salePrice = $_POST["sale-price"];
        $currentPrice = $_POST["current-price"];
        if(empty($gram) || empty($salePrice) || empty($currentPrice)){
+        $errorMessage = "Required!";
         echo '<script>alert("Please Enter valid numbers in all files.")</script>'; 
        }else{
         $gramToPae =$gram / 1.0205;
